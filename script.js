@@ -60,5 +60,12 @@ $(document).ready(function () {
   //     $.ajax();
   //   });
 
-  //get request in ajaxcall
+  //getJSON reuqest
+  $("#load").click(function () {
+    $.getJSON("details.json", function (data) {
+      $("#text").html(
+        "<p><b> Name : </b>" + data.name + "<b> City</b> : " + data.city
+      );
+    });
+  });
 });
